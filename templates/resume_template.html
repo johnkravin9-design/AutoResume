@@ -1,0 +1,41 @@
+<!doctype html> <html> <head> <meta 
+  charset="utf-8" /> <title>{{ name }} - 
+  Resume</title> <style>
+    body { font-family: Arial, sans-serif; 
+    margin: 28px; color: #222; } header { 
+    border-bottom: 2px solid #eee; 
+    margin-bottom: 12px; padding-bottom: 8px; 
+    }
+    h1 { margin: 0; font-size: 24px; } h2 { 
+    margin-top: 14px; font-size: 16px; 
+    border-bottom:1px solid #f0f0f0; 
+    padding-bottom:4px;} .section { 
+    margin-bottom: 10px; } ul { margin:0; 
+    padding-left:18px; } .meta { font-size: 
+    13px; color: #555; }
+  </style> </head> <body> <header> <h1>{{ name 
+    }}</h1>
+    <div class="meta">{{ title }} • {{ 
+    contact.email }}{% if contact.phone %} • 
+    {{ contact.phone }}{% endif %}</div> {% if 
+    summary %}<p>{{ summary }}</p>{% endif %}
+  </header> <div class="section"> 
+    <h2>Experience</h2> {% for e in experience 
+    %}
+      <div> <strong>{{ e.role }}</strong> — {{ 
+        e.company }} <span 
+        style="float:right;">{{ e.start }} — 
+        {{ e.end or 'Present' }}</span> <ul> 
+        {% for b in e.bullets %}
+          <li>{{ b }}</li> {% endfor %} </ul> 
+      </div>
+    {% endfor %} </div> <div class="section"> 
+    <h2>Skills</h2> <div>{{ skills | join(', 
+    ') }}</div>
+  </div> <div class="section"> 
+    <h2>Education</h2> {% for ed in education 
+    %}
+      <div><strong>{{ ed.degree }}</strong>, 
+      {{ ed.school }} — {{ ed.year }}</div>
+    {% endfor %} </div> </body>
+</html>

@@ -1,0 +1,29 @@
+name: Jane Doe
+title: Software Engineer
+contact:
+  email: jane.doe@example.com
+  phone: "+1 555 123 4567"
+  linkedin: https://linkedin.com/in/janedoe
+
+summary: >
+  Passionate software engineer with 5+ years of experience
+  building scalable web applications and APIs.
+
+experience:
+  - company: Acme Corp
+    role: Senior Developer
+    years: 2020–Present
+    details: >
+      Lead backend development with Python and Flask,
+      improved API performance by 35%.
+
+  - company: Beta Inc
+    role: Software Engineer
+    years: 2017–2020
+    details: >
+      Worked on full-stack features using JavaScript and Django.
+
+education:
+  - degree: B.Sc. in Computer Science
+    school: University of Example
+    years: 2013–2017
